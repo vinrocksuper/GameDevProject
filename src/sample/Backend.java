@@ -27,7 +27,7 @@ public class Backend {
          *
          * Change scores.csv to w/e the csv is going to be named.
          */
-        Path pathToFile = Paths.get("src/scores.csv");
+        Path pathToFile = Paths.get("src/Test.csv");
 
         try (BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.UTF_8)) {
             String line = br.readLine();
