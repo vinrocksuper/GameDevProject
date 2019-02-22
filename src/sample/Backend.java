@@ -30,19 +30,19 @@ public class Backend {
         Path pathToFile = Paths.get("src/Test.csv");
 
         try (BufferedReader br = Files.newBufferedReader(pathToFile, StandardCharsets.UTF_8)) {
-            String line = br.readLine();
-            if (line == null) {
-                return z;
-            }
-            while (line != null) {
-                String[] attributes = line.split(",");
+                String line = br.readLine();
+                if (line == null) {
+                    return z;
+                }
+                while (line != null) {
+                    String[] attributes = line.split(",");
 
-                Question temp = Question.createQuestion(attributes);
+                    Question temp = Question.createQuestion(attributes);
 
-                z.add(temp);
-                line = br.readLine();
+                    z.add(temp);
+                    line = br.readLine();
 
-            }
+                }
 
         } catch (IOException ioe) {
             ioe.printStackTrace();

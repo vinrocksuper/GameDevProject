@@ -13,7 +13,8 @@ public class Controller
 
     public void startGame(ActionEvent event)
     {
-
+        question.setText(Backend.fromCSV().get(0).getScenario());
+        optionOne.setText(Backend.fromCSV().get(0).getYes());
+        optionTwo.setText(Backend.fromCSV().get(0).getNo());
     }
-
 }

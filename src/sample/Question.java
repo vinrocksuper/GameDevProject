@@ -86,4 +86,6 @@ public class Question {
         int nBio = Integer.parseInt(info[10]);
         return new Question(sc,yP,nP,yPol,yMon,ySup,yBio,nPol,nMon,nSup,nBio);
     }
+
+    public void setText(String txt) { scenario = txt; }
 }
