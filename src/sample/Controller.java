@@ -52,11 +52,22 @@ public class Controller implements Initializable
 
     public void update()
     {
+        if(tracker != temp.size())
+        {
         question.setText(temp.get(tracker).getScenario());
         optionOne.setText(temp.get(tracker).getYes());
         optionTwo.setText(temp.get(tracker).getNo());
         tracker++;
         progress.setProgress((double)tracker/temp.size());
+
+
+        }
+        else
+        {
+            question.setText("Your term is over!");
+            optionOne.setVisible(false);
+            optionTwo.setVisible(false);
+        }
         /**
          * just a test
          */
