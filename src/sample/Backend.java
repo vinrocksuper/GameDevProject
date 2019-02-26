@@ -17,10 +17,10 @@ import java.util.List;
 public class Backend {
 
 
-    public static List<Question> fromCSV() {
+    public static ArrayList<Question> fromCSV() {
 
 
-        List<Question> z = new ArrayList<>();
+        ArrayList<Question> z = new ArrayList<>();
 
         /**
          * Note to self:

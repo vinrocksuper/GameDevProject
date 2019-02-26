@@ -7,13 +7,11 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Button fx:id="startButton" layoutX="200.0" layoutY="35.0" mnemonicParsing="false" onAction="#startGame" text="Start Button" />
-      <Button fx:id="next" layoutX="363.0" layoutY="421.0" mnemonicParsing="false" text="Next Scenerio" />
       <Label fx:id="question" alignment="CENTER" contentDisplay="TOP" layoutX="16.0" layoutY="66.0" prefHeight="43.0" prefWidth="468.0" text="Company X is bribing you to allow it to sell untested pesticides" textFill="RED" />
-      <Button fx:id="optionOne" layoutX="16.0" layoutY="127.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="198.0" text="Accept the bribe" />
-      <Button fx:id="optionTwo" layoutX="288.0" layoutY="127.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="198.0" text="Reject their offer" />
+      <Button fx:id="optionOne" layoutX="16.0" layoutY="127.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="198.0" text="Accept the bribe" onAction="#handler"/>
+      <Button fx:id="optionTwo" layoutX="288.0" layoutY="127.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="198.0" text="Reject their offer" onAction="#handler"/>
       <ProgressBar fx:id="progress" layoutX="15.0" layoutY="421.0" prefHeight="31.0" prefWidth="332.0" progress="0.0" />
       <TableView layoutX="15.0" layoutY="186.0" prefHeight="200.0" prefWidth="468.0">
         <columns>
