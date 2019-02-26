@@ -46,8 +46,18 @@ public class Controller implements Initializable
     public void initialize(URL location, ResourceBundle resources) {
         gameState = true;
         temp = Backend.fromCSV();
+        update();
 
     }
+
+    public void update()
+    {
+        question.setText(temp.get(tracker).getScenario());
+        optionOne.setText(temp.get(tracker).getYes());
+        optionTwo.setText(temp.get(tracker).getNo());
+        tracker++;
+    }
+
 
     public void handler(javafx.event.ActionEvent event) {
 
@@ -56,11 +66,12 @@ public class Controller implements Initializable
             if(event.getSource().equals(optionOne))
             {
               /** updates values of w/e the choice brings **/
-
+                update();
             }
             else
             {
                 /** updates values of w/e the choice brings **/
+                update();
             }
         }
         else
