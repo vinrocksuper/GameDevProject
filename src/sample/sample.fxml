@@ -7,19 +7,20 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="350.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="307.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label fx:id="question" alignment="CENTER" contentDisplay="TOP" layoutX="19.0" layoutY="23.0" prefHeight="43.0" prefWidth="768.0" text="Company X is bribing you to allow it to sell untested pesticides" textFill="RED" />
+      <Label fx:id="question" alignment="CENTER" contentDisplay="TOP" layoutX="19.0" layoutY="23.0" prefHeight="43.0" prefWidth="768.0" text="Company X is bribing you to allow it to sell untested pesticides" textFill="#0700ff" />
       <Button fx:id="optionOne" layoutX="14.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="77.0" prefWidth="373.0" text="Accept the bribe" wrapText="true" />
       <Button fx:id="optionTwo" layoutX="414.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="77.0" prefWidth="373.0" text="Reject their offer" wrapText="true" />
-      <ProgressBar fx:id="progress" layoutX="16.0" layoutY="284.0" prefHeight="31.0" prefWidth="774.0" progress="0.0" />
-      <TableView layoutX="13.0" layoutY="153.0" prefHeight="107.0" prefWidth="774.0">
+      <ProgressBar fx:id="progress" layoutX="16.0" layoutY="265.0" prefHeight="28.0" prefWidth="774.0" progress="0.0" />
+      <TableView fx:id="stats" layoutX="13.0" layoutY="153.0" prefHeight="51.0" prefWidth="774.0">
         <columns>
             <TableColumn fx:id="biodiversity" prefWidth="193.5" text="Biodiversity" />
           <TableColumn fx:id="money" prefWidth="193.5" text="Money" />
           <TableColumn fx:id="pollution" prefWidth="193.5" text="Pollution" />
-            <TableColumn fx:id="publicSupport" prefWidth="193.5" text="Public Support" />
+            <TableColumn fx:id="publicSupport" prefWidth="190.0" text="Public Support" />
         </columns>
       </TableView>
+      <Label alignment="CENTER" layoutX="19.0" layoutY="228.0" prefHeight="28.0" prefWidth="768.0" text="Progress to End of Term" />
    </children>
 </Pane>

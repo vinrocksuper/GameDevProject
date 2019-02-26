@@ -1,11 +1,14 @@
 package sample;
 
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ProgressBar;
-import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,16 +23,13 @@ public class Controller implements Initializable
     public Button optionOne;
     public Button optionTwo;
     public ProgressBar progress;
+    public TableView<PlayerStats> stats;
     public TableColumn biodiversity;
     public TableColumn money;
     public TableColumn pollution;
     public TableColumn publicSupport;
     private ArrayList<Question> temp;
     private boolean gameState = false;
-    private int bio = 10;
-    private int mon = 10;
-    private int pol = 10;
-    private int sup = 10;
     private int tracker = 0;
     public void startGame(ActionEvent event)
     {
@@ -42,9 +42,21 @@ public class Controller implements Initializable
   **/
     }
 
+    private final ObservableList<PlayerStats> currentStats = FXCollections.observableArrayList(
+            new PlayerStats(10, 10, 10, 10)
+    );
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         gameState = true;
+
+        biodiversity.setCellValueFactory(new PropertyValueFactory<>("Biodiversity"));
+        money.setCellValueFactory(new PropertyValueFactory<>("Money"));
+        pollution.setCellValueFactory(new PropertyValueFactory<>("Pollution"));
+        publicSupport.setCellValueFactory(new PropertyValueFactory<>("PublicSupport"));
+
+        stats.setItems(currentStats);
+
         temp = Backend.fromCSV();
         update();
 
