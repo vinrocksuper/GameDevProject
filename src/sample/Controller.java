@@ -26,7 +26,11 @@ public class Controller implements Initializable
     public TableColumn publicSupport;
     private ArrayList<Question> temp;
     private boolean gameState = false;
-
+    private int bio;
+    private int mon;
+    private int pol;
+    private int sup;
+    private int tracker = 0;
     public void startGame(ActionEvent event)
     {
  /**https://stackoverflow.com/questions/30200461/javafx-how-can-i-modify-button-text-in-real-time
@@ -45,8 +49,23 @@ public class Controller implements Initializable
 
     }
 
-    public void handler()
-    {
+    public void handler(javafx.event.ActionEvent event) {
 
+        if(gameState)
+        {
+            if(event.getSource().equals(optionOne))
+            {
+              /** updates values of w/e the choice brings **/
+
+            }
+            else
+            {
+                /** updates values of w/e the choice brings **/
+            }
+        }
+        else
+        {
+            question.setText("You have lost.");
+        }
     }
 }
