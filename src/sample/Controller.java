@@ -26,10 +26,10 @@ public class Controller implements Initializable
     public TableColumn publicSupport;
     private ArrayList<Question> temp;
     private boolean gameState = false;
-    private int bio;
-    private int mon;
-    private int pol;
-    private int sup;
+    private int bio = 10;
+    private int mon = 10;
+    private int pol = 10;
+    private int sup = 10;
     private int tracker = 0;
     public void startGame(ActionEvent event)
     {
@@ -57,7 +57,6 @@ public class Controller implements Initializable
         optionTwo.setText(temp.get(tracker).getNo());
         tracker++;
     }
-
 
     public void handler(javafx.event.ActionEvent event) {
 
