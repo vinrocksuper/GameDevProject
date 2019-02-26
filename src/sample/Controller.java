@@ -57,6 +57,7 @@ public class Controller implements Initializable
         question.setText(temp.get(tracker).getScenario());
         optionOne.setText(temp.get(tracker).getYes());
         optionTwo.setText(temp.get(tracker).getNo());
+        System.out.println(temp.size());
         tracker++;
         progress.setProgress((double)tracker/temp.size());
 
@@ -71,6 +72,12 @@ public class Controller implements Initializable
         /**
          * just a test
          */
+        if(tracker >= temp.size())
+        {
+            question.setText("You have reached the end of your term.");
+            optionOne.setText("Nice");
+            optionTwo.setText("Not Nice");
+        }
     }
 
     public void handler(javafx.event.ActionEvent event) {
