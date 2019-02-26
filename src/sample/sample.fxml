@@ -7,18 +7,18 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="350.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label fx:id="question" alignment="CENTER" contentDisplay="TOP" layoutX="16.0" layoutY="66.0" prefHeight="43.0" prefWidth="468.0" text="Company X is bribing you to allow it to sell untested pesticides" textFill="RED" />
-      <Button fx:id="optionOne" layoutX="16.0" layoutY="127.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="198.0" text="Accept the bribe" onAction="#handler"/>
-      <Button fx:id="optionTwo" layoutX="288.0" layoutY="127.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="198.0" text="Reject their offer" onAction="#handler"/>
-      <ProgressBar fx:id="progress" layoutX="15.0" layoutY="421.0" prefHeight="31.0" prefWidth="332.0" progress="0.0" />
-      <TableView layoutX="15.0" layoutY="186.0" prefHeight="200.0" prefWidth="468.0">
+      <Label fx:id="question" alignment="CENTER" contentDisplay="TOP" layoutX="19.0" layoutY="23.0" prefHeight="43.0" prefWidth="768.0" text="Company X is bribing you to allow it to sell untested pesticides" textFill="RED" />
+      <Button fx:id="optionOne" layoutX="14.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="77.0" prefWidth="373.0" text="Accept the bribe" wrapText="true" />
+      <Button fx:id="optionTwo" layoutX="414.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="77.0" prefWidth="373.0" text="Reject their offer" wrapText="true" />
+      <ProgressBar fx:id="progress" layoutX="16.0" layoutY="284.0" prefHeight="31.0" prefWidth="774.0" progress="0.0" />
+      <TableView layoutX="13.0" layoutY="153.0" prefHeight="107.0" prefWidth="774.0">
         <columns>
-            <TableColumn fx:id="biodiversity" prefWidth="115.0" text="Biodiversity" />
-          <TableColumn fx:id="money" prefWidth="119.0" text="Money" />
-          <TableColumn fx:id="pollution" prefWidth="113.0" text="Pollution" />
-            <TableColumn fx:id="publicSupport" prefWidth="120.0" text="Public Support" />
+            <TableColumn fx:id="biodiversity" prefWidth="193.5" text="Biodiversity" />
+          <TableColumn fx:id="money" prefWidth="193.5" text="Money" />
+          <TableColumn fx:id="pollution" prefWidth="193.5" text="Pollution" />
+            <TableColumn fx:id="publicSupport" prefWidth="193.5" text="Public Support" />
         </columns>
       </TableView>
    </children>

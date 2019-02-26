@@ -56,6 +56,10 @@ public class Controller implements Initializable
         optionOne.setText(temp.get(tracker).getYes());
         optionTwo.setText(temp.get(tracker).getNo());
         tracker++;
+        if (tracker == 5)
+        {
+            tracker = 0;
+        }
     }
 
 
