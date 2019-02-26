@@ -57,6 +57,9 @@ public class Controller implements Initializable
         optionTwo.setText(temp.get(tracker).getNo());
         tracker++;
         progress.setProgress((double)tracker/temp.size());
+        /**
+         * just a test
+         */
     }
 
     public void handler(javafx.event.ActionEvent event) {
