@@ -27,8 +27,5 @@ public class Main extends Application {
             System.out.println(l.get(i).getScenario());
         }
         launch(args);
-
-
-
     }
 }
