@@ -30,7 +30,7 @@ public class Controller implements Initializable
     public TableColumn publicSupport;
     private ArrayList<Question> temp;
     private boolean gameState = false;
-    private int tracker = 0;
+    private int tracker = -1;
 
     private int bio = 10;
     private int mon = 10;
@@ -61,31 +61,40 @@ public class Controller implements Initializable
 
     public void update()
     {
-        if(tracker != temp.size())
+        if(tracker < temp.size())
         {
+            tracker++;
+            if(tracker>=temp.size())
+            {
+
+                question.setText("You have reached the end of your term.");
+                optionOne.setText("Nice");
+                optionTwo.setText("Not Nice");
+                progress.setProgress((double)tracker/temp.size());
+                return;
+            }
             question.setText(temp.get(tracker).getScenario());
             optionOne.setText(temp.get(tracker).getYes());
             optionTwo.setText(temp.get(tracker).getNo());
             System.out.println(temp.size());
             setStats();
-            tracker++;
+
             progress.setProgress((double)tracker/temp.size());
         }
-        else
+        /**else
         {
             question.setText("Your term is over!");
             optionOne.setVisible(false);
             optionTwo.setVisible(false);
         }
-        /**
-         * just a test
-         */
-        if(tracker >= temp.size())
-        {
+      **/
+
+        else {
             question.setText("You have reached the end of your term.");
             optionOne.setText("Nice");
             optionTwo.setText("Not Nice");
         }
+
     }
 
     public void setStats()
@@ -99,50 +108,35 @@ public class Controller implements Initializable
 
     public void handler(javafx.event.ActionEvent event) {
 
-        if(gameState)
+        if(gameState &&tracker < temp.size())
         {
+
             if(event.getSource().equals(optionOne))
             {
-                /** updates values of w/e the choice brings **/
-                update();
-                System.out.println(bio);
-                System.out.println(temp.get(tracker).getyBiodiversity());
-                System.out.println(mon);
-                System.out.println(temp.get(tracker).getyMoney());
-                System.out.println(pol);
-                System.out.println(temp.get(tracker).getyPollution());
-                System.out.println(pub);
-                System.out.println(temp.get(tracker).getySupport());
+                if(tracker < temp.size()) {
 
                 bio += temp.get(tracker).getyBiodiversity();
                 mon += temp.get(tracker).getyMoney();
                 pol += temp.get(tracker).getyPollution();
                 pub += temp.get(tracker).getySupport();
                 currentStats.setAll(new PlayerStats(bio, mon, pol, pub));
+                    /** updates values of w/e the choice brings **/
+                update();
+                }
             }
             else
             {
-                /** updates values of w/e the choice brings **/
-                update();
-                System.out.println(bio);
-                System.out.println(temp.get(tracker).getnBiodiversity());
-                System.out.println(mon);
-                System.out.println(temp.get(tracker).getnMoney());
-                System.out.println(pol);
-                System.out.println(temp.get(tracker).getnPollution());
-                System.out.println(pub);
-                System.out.println(temp.get(tracker).getnSupport());
+                if(tracker < temp.size()) {
 
-                bio += temp.get(tracker).getnBiodiversity();
-                mon += temp.get(tracker).getnMoney();
-                pol += temp.get(tracker).getnPollution();
-                pub += temp.get(tracker).getnSupport();
-                currentStats.setAll(new PlayerStats(bio, mon, pol, pub));
+                    bio += temp.get(tracker).getnBiodiversity();
+                    mon += temp.get(tracker).getnMoney();
+                    pol += temp.get(tracker).getnPollution();
+                    pub += temp.get(tracker).getnSupport();
+                    currentStats.setAll(new PlayerStats(bio, mon, pol, pub));
+                    /** updates values of w/e the choice brings **/
+                    update();
+                }
             }
-        }
-        else
-        {
-            question.setText("You have lost.");
         }
     }
 }

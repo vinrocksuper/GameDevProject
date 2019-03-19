@@ -22,10 +22,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         List<Question> l = Backend.fromCSV();
-        for(int i=0;i<l.size();i++)
-        {
-            System.out.println(l.get(i).getScenario());
-        }
         launch(args);
     }
 }
