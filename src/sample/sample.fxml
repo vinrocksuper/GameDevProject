@@ -7,20 +7,21 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="307.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="550.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label fx:id="question" alignment="CENTER" contentDisplay="TOP" layoutX="19.0" layoutY="23.0" prefHeight="43.0" prefWidth="768.0" text="Company X is bribing you to allow it to sell untested pesticides" textFill="#0700ff" />
-      <Button fx:id="optionOne" layoutX="14.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="77.0" prefWidth="373.0" text="Accept the bribe" wrapText="true" />
-      <Button fx:id="optionTwo" layoutX="414.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="77.0" prefWidth="373.0" text="Reject their offer" wrapText="true" />
-      <ProgressBar fx:id="progress" layoutX="16.0" layoutY="265.0" prefHeight="28.0" prefWidth="774.0" progress="0.0" />
-      <TableView fx:id="stats" layoutX="13.0" layoutY="153.0" prefHeight="51.0" prefWidth="774.0">
+      <Label fx:id="question" alignment="CENTER" contentDisplay="TOP" layoutX="19.0" layoutY="23.0" prefHeight="43.0" prefWidth="520.0" text="Company X is bribing you to allow it to sell untested pesticides" textFill="#0700ff" />
+      <Button fx:id="optionOne" layoutX="14.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="51.0" prefWidth="250.0" text="Accept the bribe" wrapText="true" />
+      <Button fx:id="optionTwo" layoutX="288.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="51.0" prefWidth="250.0" text="Reject their offer" wrapText="true" />
+      <ProgressBar fx:id="progress" layoutX="13.0" layoutY="203.0" prefHeight="28.0" prefWidth="520.0" progress="0.0" />
+      <TableView fx:id="stats" layoutX="16.0" layoutY="129.0" prefHeight="67.0" prefWidth="520.0">
         <columns>
-            <TableColumn fx:id="biodiversity" prefWidth="193.5" text="Biodiversity" />
-          <TableColumn fx:id="money" prefWidth="193.5" text="Money" />
-          <TableColumn fx:id="pollution" prefWidth="193.5" text="Pollution" />
-            <TableColumn fx:id="publicSupport" prefWidth="190.0" text="Public Support" />
+            <TableColumn fx:id="biodiversity" prefWidth="130.0" text="Biodiversity" />
+          <TableColumn fx:id="money" minWidth="2.0" prefWidth="130.0" text="Money" />
+          <TableColumn fx:id="pollution" minWidth="0.0" prefWidth="130.0" text="Pollution" />
+            <TableColumn fx:id="publicSupport" minWidth="0.0" prefWidth="130.0" text="Public Support" />
         </columns>
       </TableView>
-      <Label alignment="CENTER" layoutX="19.0" layoutY="228.0" prefHeight="28.0" prefWidth="768.0" text="Progress to End of Term" />
+      <Label alignment="CENTER" layoutX="13.0" layoutY="204.0" prefHeight="28.0" prefWidth="520.0" text="Progress to End of Term" />
+      <Pane layoutX="13.0" layoutY="242.0" prefHeight="294.0" prefWidth="520.0" />
    </children>
 </Pane>
