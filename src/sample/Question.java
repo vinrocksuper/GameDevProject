@@ -16,7 +16,7 @@ public class Question {
     public Question(String s,String y, String n, int yP, int yM, int yS, int yB, int nP, int nM, int nS, int nB)
     {
         scenario = s;
-        yes =y;
+        yes = y;
         no = n;
         yPollution = yP;
         yMoney = yM;
