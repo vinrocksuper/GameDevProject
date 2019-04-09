@@ -1,6 +1,12 @@
 package sample;
 
 public class Question {
+    private int qPol;
+    private int qMon;
+    private int qSup;
+
+
+    private int qBio;
     private String scenario;
     private String yes;
     private String no;
@@ -13,8 +19,12 @@ public class Question {
     private int nSupport;
     private int nBiodiversity;
 
-    public Question(String s,String y, String n, int yP, int yM, int yS, int yB, int nP, int nM, int nS, int nB)
+    public Question(int x, int a, int z, int b,String s,String y, String n, int yP, int yM, int yS, int yB, int nP, int nM, int nS, int nB)
     {
+        qPol = x;
+        qMon = a;
+        qSup = z;
+        qBio = b;
         scenario = s;
         yes = y;
         no = n;
@@ -71,21 +81,47 @@ public class Question {
     public int getnBiodiversity() {
         return nBiodiversity;
     }
+    public int getqPol() {
+        return qPol;
+    }
+
+    public int getqMon() {
+        return qMon;
+    }
+
+    public int getqSup() {
+        return qSup;
+    }
+
+    public int getqBio() {
+        return qBio;
+    }
+
     public static Question createQuestion(String[] info)
     {
-        String sc = info[0];
-        String yP = info[1];
-        String nP = info[2];
-        int yPol = Integer.parseInt(info[3]);
-        int yMon = Integer.parseInt(info[4]);
-        int ySup = Integer.parseInt(info[5]);
-        int yBio = Integer.parseInt(info[6]);
-        int nPol = Integer.parseInt(info[7]);
-        int nMon = Integer.parseInt(info[8]);
-        int nSup = Integer.parseInt(info[9]);
-        int nBio = Integer.parseInt(info[10]);
-        return new Question(sc,yP,nP,yPol,yMon,ySup,yBio,nPol,nMon,nSup,nBio);
+        int a = Integer.parseInt(info[0]);
+        int b = Integer.parseInt(info[1]);
+        int c = Integer.parseInt(info[2]);
+        int d = Integer.parseInt(info[3]);
+        String sc = info[4];
+        String yP = info[5];
+        String nP = info[6];
+        int yPol = Integer.parseInt(info[7]);
+        int yMon = Integer.parseInt(info[8]);
+        int ySup = Integer.parseInt(info[9]);
+        int yBio = Integer.parseInt(info[10]);
+        int nPol = Integer.parseInt(info[11]);
+        int nMon = Integer.parseInt(info[12]);
+        int nSup = Integer.parseInt(info[13]);
+        int nBio = Integer.parseInt(info[14]);
+        return new Question(a,b,c,d,sc,yP,nP,yPol,yMon,ySup,yBio,nPol,nMon,nSup,nBio);
 }
 
     public void setText(String txt) { scenario = txt; }
+
+    public String toString()
+    {
+        return this.getScenario();
+    }
+
 }
