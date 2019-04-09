@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable
+public class   Controller implements Initializable
 {
 
     public Label question;

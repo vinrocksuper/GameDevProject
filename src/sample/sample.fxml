@@ -13,13 +13,16 @@
       <Button fx:id="optionOne" layoutX="14.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="51.0" prefWidth="250.0" text="Accept the bribe" wrapText="true" />
       <Button fx:id="optionTwo" layoutX="288.0" layoutY="66.0" mnemonicParsing="false" onAction="#handler" prefHeight="51.0" prefWidth="250.0" text="Reject their offer" wrapText="true" />
       <ProgressBar fx:id="progress" layoutX="13.0" layoutY="203.0" prefHeight="28.0" prefWidth="520.0" progress="0.0" />
-      <TableView fx:id="stats" layoutX="16.0" layoutY="129.0" prefHeight="67.0" prefWidth="520.0">
+      <TableView fx:id="stats" layoutX="15.0" layoutY="129.0" prefHeight="51.0" prefWidth="520.0">
         <columns>
             <TableColumn fx:id="biodiversity" prefWidth="130.0" text="Biodiversity" />
           <TableColumn fx:id="money" minWidth="2.0" prefWidth="130.0" text="Money" />
           <TableColumn fx:id="pollution" minWidth="0.0" prefWidth="130.0" text="Pollution" />
             <TableColumn fx:id="publicSupport" minWidth="0.0" prefWidth="130.0" text="Public Support" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
       <Label alignment="CENTER" layoutX="13.0" layoutY="204.0" prefHeight="28.0" prefWidth="520.0" text="Progress to End of Term" />
       <Pane layoutX="13.0" layoutY="242.0" prefHeight="294.0" prefWidth="520.0" />
