@@ -55,6 +55,39 @@ public class   Controller implements Initializable
         update();
 
     }
+    public void loseCondition()
+    {
+        if(bio <= -10)
+        {
+            gameState = false;
+            question.setText("The environment has given up. All the local fauna and flora has died out. You Lose.");
+            optionOne.setText("Nice");
+            optionTwo.setText("Not Nice");
+        }
+        if(mon <= -10)
+        {
+            gameState = false;
+            question.setText("You are bankrupt. People are protesting your financial decisions and are shamed out of office. You Lose.");
+            optionOne.setText("Nice");
+            optionTwo.setText("Not Nice");
+        }
+        if(pol >= 10)
+        {
+            gameState = false;
+            question.setText("The sheer amount of pollution has caused your domain to be uninhabitable. You Lose.");
+            optionOne.setText("Nice");
+            optionTwo.setText("Not Nice");
+        }
+        if(pub <= -10)
+        {
+            gameState = false;
+            question.setText("Your gross incompetence as a leader has caused mass protests. You are forced to resign. You Lose.");
+            optionOne.setText("Nice");
+            optionTwo.setText("Not Nice");
+        }
+    }
+
+
     public void filter(ArrayList<Question> t)
     {
         for(int i=0;i<t.size();i++)
@@ -120,6 +153,7 @@ public class   Controller implements Initializable
 
     public void update()
     {
+        loseCondition();
         if(tracker < temp.size())
         {
             tracker++;
@@ -158,7 +192,7 @@ public class   Controller implements Initializable
     }
 
     public void handler(javafx.event.ActionEvent event) {
-
+        loseCondition();
         if(gameState &&tracker < temp.size())
         {
 

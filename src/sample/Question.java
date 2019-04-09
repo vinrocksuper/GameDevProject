@@ -117,7 +117,7 @@ public class Question {
         return new Question(a,b,c,d,sc,yP,nP,yPol,yMon,ySup,yBio,nPol,nMon,nSup,nBio);
 }
 
-    public void setText(String txt) { scenario = txt; }
+
 
     public String toString()
     {
