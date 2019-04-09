@@ -64,21 +64,25 @@ public class Controller implements Initializable
                 if(t.get(i).getqPol() >= this.pol)
                 {
                     ineligible.add(t.remove(i));
+
                     break;
                 }
                 if(t.get(i).getqMon() > this.mon)
                 {
                     ineligible.add(t.remove(i));
+
                     break;
                 }
                 if(t.get(i).getqSup() <= this.pub)
                 {
                     ineligible.add((t.remove(i)));
+
                     break;
                 }
                 if(t.get(i).getqBio() > this.mon)
                 {
                     ineligible.add(t.remove(i));
+
                     break;
                 }
             }
@@ -131,7 +135,6 @@ public class Controller implements Initializable
             question.setText(temp.get(tracker).getScenario());
             optionOne.setText(temp.get(tracker).getYes());
             optionTwo.setText(temp.get(tracker).getNo());
-            System.out.println(temp.get(0).toString() + temp.get(1) + temp.get(2) + temp.get(3));
             setStats();
             reAdd();
             filter(temp);
